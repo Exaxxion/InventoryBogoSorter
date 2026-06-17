@@ -31,13 +31,14 @@ public class GTCompat {
     private static final GT GTNE  = new GT("GregTech Nomifactory Edition");
     /** GregTech Community Edition Unofficial */
     private static final GT GTCEu = new GT("GregTech", "gregtech.api.items.toolitem.IGTTool", "GT.Tool");
+    /** GregTech Tech Journey Fork */
+    private static final GT GTTJ  = new GT("GregTech CE TJ");
 
     static {
-        // All three GregTechs use the ModID "gregtech"
+        // All four GregTechs use the ModID "gregtech"
         BogoSorter.Mods mod = BogoSorter.Mods.GT_ANY;
 
         // Determine which GregTech is loaded
-        // no GT loaded
         if(Loader.isModLoaded(mod.id)) {
             ModContainer m = Loader.instance().getIndexedModList().get(mod.id);
             if(isGTCE(m))
@@ -46,6 +47,8 @@ public class GTCompat {
                 gt = GTNE;
             else if(isGTCEu(m))
                 gt = GTCEu;
+            else if(isGTTJ(m))
+                gt = GTTJ;
             else // unsupported
                 gt = null;
         } else
@@ -90,5 +93,9 @@ public class GTCompat {
 
     public static boolean isGTNE(ModContainer m) {
         return GTNE.modName.equals(m.getMetadata().name);
+    }
+
+    public static boolean isGTTJ(ModContainer m) {
+        return GTTJ.modName.equals(m.getMetadata().name);
     }
 }

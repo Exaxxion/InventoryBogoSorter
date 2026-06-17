@@ -109,4 +109,8 @@ dependencies {
     // To test against GTCEu, uncomment this block
 //    runtimeOnly "codechicken:codechickenlib:3.2.3.358"
 //    runtimeOnly rfg.deobf('curse.maven:gregtech_ce_unofficial-557242:4325257')
+
+    // To test against GT TJ Fork, uncomment this block
+//    runtimeOnly "codechicken:codechickenlib:3.2.3.358"
+//    runtimeOnly rfg.deobf('curse.maven:gtce_tj_edition-597032:8244866')
 }

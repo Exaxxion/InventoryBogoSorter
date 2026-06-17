@@ -116,6 +116,7 @@ public class BogoSorter {
         GTCE(ModIds.GREGTECH, GTCompat::isGTCE),
         GTNE(ModIds.GREGTECH, GTCompat::isGTNE),
         GTCEu(ModIds.GREGTECH, GTCompat::isGTCEu),
+        GTTJ(ModIds.GREGTECH, GTCompat::isGTTJ),
 
         IC2_ANY(ModIds.IC2),
         IC2_CLASSIC(ModIds.IC2, m -> m.getName().endsWith("Classic")),
